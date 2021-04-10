@@ -22,7 +22,7 @@ console.log(process.pid) */ // ppid
 }, 3000); */
 
 // 4 事件
-process.on('beforeExit', (code) => {
+/* process.on('beforeExit', (code) => {
   console.log('beforeExit code: ', code);
 });
 
@@ -32,4 +32,26 @@ process.on('exit', (code) => {
 
 console.log('执行代码完了');
 
-process.exit();
+process.exit(); */
+
+// 5 标准 输入 输出
+/* console.log = function(data){
+  process.stdout.write('data: ' + data + '\n');
+}
+
+console.log(11);
+console.log(22); */
+
+/* const fs = require('fs');
+
+fs.createReadStream('./base/test.txt').pipe(process.stdout); */
+
+// process.stdin.pipe(process.stdout);
+
+process.stdin.setEncoding('utf-8');
+process.stdin.on('readable', (data) => {
+  let chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write('data :' + chunk);
+  }
+});
