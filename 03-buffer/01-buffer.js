@@ -4,7 +4,7 @@ const b2 = Buffer.allocUnsafe(10)
 console.log(b1)
 console.log(b2) */
 
-// from 
+// from
 /* const b1 = Buffer.from('中')
 console.log(b1) */
 
@@ -16,12 +16,12 @@ console.log(b1.toString())  */
 console.log(b1)
 console.log(b1.toString()) */
 
-const b1 = Buffer.alloc(3)
-const b2 = Buffer.from(b1)
+const b1 = Buffer.alloc(3);
+const b2 = Buffer.from(b1);
 
-console.log(b1)
-console.log(b2)
+console.log(b1);
+console.log(b2);
 
-b1[0] = 1
-console.log(b1)
-console.log(b2)
+b1[0] = 1;
+console.log(b1);
+console.log(b2);
